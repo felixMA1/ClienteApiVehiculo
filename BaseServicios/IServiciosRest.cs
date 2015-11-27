@@ -15,10 +15,10 @@ namespace BaseServicios
 
         Task<TModelo> Add(TModelo model);
         Task Update(TModelo model);
-        Task Delete(TModelo model);
+        Task Delete(int id);
 
         //Las llamadas a Get (operaciones de consulta) pueden ser sincronas por eso no usamos Task
-        List<TModelo> Get();
+        List<TModelo> Get(String paramUrl = null);
         List<TModelo> Get(Dictionary<String, String> param);
         TModelo Get(int id);
     }
